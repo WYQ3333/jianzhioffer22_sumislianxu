@@ -7,6 +7,7 @@ class Solution {
 public:
 	vector<vector<int> > FindContinuousSequence(int sum) {
 		vector<vector<int>> result = { {} };
+		result.resize(sum / 5);
 		int i = 0;
 		int index = 0;
 		for (i = 0; i < sum; ++i){
@@ -22,6 +23,7 @@ public:
 						result[index].push_back(temp);
 					}
 					++index;
+					break;
 				}
 				if (num>sum){
 					break;
