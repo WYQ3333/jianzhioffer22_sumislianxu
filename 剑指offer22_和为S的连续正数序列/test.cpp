@@ -38,15 +38,20 @@ void TestFunc(){
 	Solution s;
 	vector<vector<int>> solution;
 	solution = s.FindContinuousSequence(100);
-	int i = 0;
-	int j = 0;
-	int index = 0;
-	for (i = 0; i < 2; ++i){
-		int temp = solution[index++].size();
-		for (j = 0; j < temp; ++j){
-			cout << solution[i][j] << " ";
+	if (solution.empty()){
+		cout << "不存在这样的数组" << endl;
+	}
+	else{
+		int i = 0;
+		int j = 0;
+		int index = 0;
+		for (i = 0; i < 2; ++i){
+			int temp = solution[index++].size();
+			for (j = 0; j < temp; ++j){
+				cout << solution[i][j] << " ";
+			}
+			cout << endl;
 		}
-		cout << endl;
 	}
 }
 
