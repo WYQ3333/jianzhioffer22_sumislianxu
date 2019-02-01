@@ -89,9 +89,9 @@ public:
 };
 
 void TestFunc(){
-	Solution s;
+	Solution3 s;
 	vector<vector<int>> solution;
-	solution = s.FindContinuousSequence(90);
+	solution = s.FindContinuousSequence(100);
 	if (solution.empty()){
 		cout << "不存在这样的数组" << endl;
 	}
