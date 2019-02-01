@@ -40,8 +40,10 @@ void TestFunc(){
 	solution = s.FindContinuousSequence(100);
 	int i = 0;
 	int j = 0;
-	for (i = 0; i < solution.size(); ++i){
-		for (j = 0; j < solution[0].size(); ++j){
+	int index = 0;
+	for (i = 0; i < 2; ++i){
+		int temp = solution[index++].size();
+		for (j = 0; j < temp; ++j){
 			cout << solution[i][j] << " ";
 		}
 		cout << endl;
