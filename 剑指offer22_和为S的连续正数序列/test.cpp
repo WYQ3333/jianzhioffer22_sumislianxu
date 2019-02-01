@@ -7,7 +7,6 @@ class Solution {
 public:
 	vector<vector<int> > FindContinuousSequence(int sum) {
 		vector<vector<int>> result = { {} };
-		result.resize(sum / 5);
 		int i = 0;
 		int index = 0;
 		for (i = 0; i < sum; ++i){
@@ -23,6 +22,7 @@ public:
 						result[index].push_back(temp);
 					}
 					++index;
+					result.resize(index+1);
 					break;
 				}
 				if (num>sum){
@@ -45,7 +45,7 @@ void TestFunc(){
 		int i = 0;
 		int j = 0;
 		int index = 0;
-		for (i = 0; i < 2; ++i){
+		for (i = 0; i < solution.size(); ++i){
 			int temp = solution[index++].size();
 			for (j = 0; j < temp; ++j){
 				cout << solution[i][j] << " ";
