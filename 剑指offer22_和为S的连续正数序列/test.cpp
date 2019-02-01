@@ -34,8 +34,30 @@ public:
 	}
 };
 
+class Solution1 {
+public:
+	vector<vector<int> > FindContinuousSequence(int sum) {
+		int l = 1, r = 1, sumx = 1;
+		vector<vector<int> > ans;
+		while (l <= r){
+			r++;
+			sumx += r;
+			while (sumx > sum){
+				sumx -= l;
+				l++;
+			}
+			if (sumx == sum && l != r){
+				vector<int> tmp;
+				for (int i = l; i <= r; i++)  tmp.push_back(i);
+				ans.push_back(tmp);
+			}
+		}
+		return ans;
+	}
+};
+
 void TestFunc(){
-	Solution s;
+	Solution1 s;
 	vector<vector<int>> solution;
 	solution = s.FindContinuousSequence(100);
 	if (solution.empty()){
