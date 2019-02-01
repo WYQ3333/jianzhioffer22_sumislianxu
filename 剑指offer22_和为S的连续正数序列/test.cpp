@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
 	vector<vector<int> > FindContinuousSequence(int sum) {
-		vector<vector<int>> result;
+		vector<vector<int>> result = { {} };
 		int i = 0;
 		int index = 0;
 		for (i = 0; i < sum; ++i){
@@ -19,8 +19,9 @@ public:
 				if (num == sum){
 					int temp = i;
 					for (temp = i; temp <= j; ++temp){
-						result[index++].push_back(temp);
+						result[index].push_back(temp);
 					}
+					++index;
 				}
 				if (num>sum){
 					break;
