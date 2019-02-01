@@ -27,11 +27,22 @@ public:
 				}
 			}
 		}
+		return result;
 	}
 };
 
 void TestFunc(){
-
+	Solution s;
+	vector<vector<int>> solution;
+	solution = s.FindContinuousSequence(100);
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < solution.size(); ++i){
+		for (j = 0; j < solution[0].size(); ++j){
+			cout << solution[i][j] << " ";
+		}
+		cout << endl;
+	}
 }
 
 int main(){
